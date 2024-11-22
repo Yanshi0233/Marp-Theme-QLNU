@@ -1,0 +1,168 @@
+/* @theme qlnu */
+
+@import 'gaia';
+
+:root {
+  --color-background: #fff;
+  --color-foreground: #333;
+  --color-highlight: #800000;
+}
+
+section {
+  background-image: none;
+  font-family:'Times New Roman', "宋体";
+  padding-top: 90px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+/* 代码块 */
+code {
+  text-indent: 0;
+}
+
+/* 段落 */
+p {
+  text-indent: 2em;
+}
+
+ul p {
+  text-indent: 0;
+}
+
+/* 页码 */
+section::after {
+  font-size: 0.7em;
+  color: #808080;
+  font-weight: 700;
+  content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
+}
+
+/* 标题（头） */
+header {
+  background-color: #800000;
+  color: #fff;
+  font-size: 1em;
+  font-weight: 700;
+}
+
+header::before {
+  content: "·";
+}
+
+/* 首页 */
+section.lead {
+  text-align: center;
+  font-family: "黑体";
+}
+section.lead h1 {
+  line-height: 2.5em;
+  color: #fff;
+  background-color: #800000;
+  text-align: center;
+}
+section.lead h1 strong {
+  -webkit-text-stroke: 1px #800000;
+}
+section.lead h2 {
+  color: #800000;
+  text-align: center;
+}
+section.lead h2 strong {
+  -webkit-text-stroke: 1px #800000;
+}
+section.lead h3 {
+  color: #800000;
+  text-align: left;
+}
+section.lead h3 strong {
+  -webkit-text-stroke: 1px #800000;
+}
+section.lead h4 {
+  color: #800000;
+  text-align: left;
+}
+section.lead h4 strong {
+  -webkit-text-stroke: 1px #800000;
+}
+section.lead h5 {
+  color: #800000;
+  text-align: left;
+}
+section.lead h5 strong {
+  -webkit-text-stroke: 1px #800000;
+}
+section.lead p {
+  text-align: center;
+  text-indent: 0;
+}
+section.lead img {
+  width: 500px;
+}
+
+/* 目录页 */
+section.dir {
+  padding-top: 3.5em;
+  padding-left: 3em;
+  font-family: "黑体";
+}
+section.dir::before {
+  content: "目录 Content";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #800000;
+  color: #fff;
+  font-size: 2em;
+  text-align: center;
+  font-family: "黑体";
+}
+/* 标题页 */
+section.title h1 {
+  position: fixed;
+  background-color: #800000;
+  color: #fff;
+  font-family: "黑体";
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 30%;
+  padding: 10px;
+  padding-top: 20%;
+  text-align: center;
+}
+section.title img[alt~="logo"] {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  height: 100px;
+}
+section.title {
+  padding-left: 30%;
+}
+
+blockquote {
+  max-width: 90%;
+  border-top: 0.1em dashed #555;
+  font-size: 60%;
+  position: absolute;
+  bottom: 20px;
+}
+blockquote::before {
+  content: "";
+}
+blockquote::after {
+  content: "";
+}
+
+/* 图片 */
+img[alt~="center"] {
+  display: block;
+  margin: 0 auto;
+}
+
+code {
+  font-family: 'Source Code Pro', monospace;
+}
